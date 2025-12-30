@@ -66,6 +66,6 @@
   --radius-2xl: calc(var(--radius) * 3);
   --radius-full: 9999px;
   
-  --font-serif: 'Playfair Display', serif;
-  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', 'Noto Sans SC', serif;
+  --font-sans: 'Inter', 'Noto Sans SC', sans-serif;
 }

@@ -47,6 +47,13 @@ This is a multi-section informational website designed to present conference det
 - Progression: User clicks card → WeChat ID copied to clipboard → Confirmation alert appears
 - Success criteria: Copy function works reliably, IDs are clearly displayed and accurate
 
+**Language Toggle**
+- Functionality: Toggle between English and Chinese (Simplified) with persistent language preference
+- Purpose: Serve both English and Chinese-speaking audiences with seamless bilingual experience
+- Trigger: Click language toggle button in navigation
+- Progression: User clicks toggle → All text switches to selected language → Preference saved for future visits
+- Success criteria: All content translates instantly, language preference persists across sessions, Chinese fonts display correctly
+
 ## Edge Case Handling
 
 - **Mobile Navigation**: Hamburger menu with overlay for small screens prevents navigation crowding

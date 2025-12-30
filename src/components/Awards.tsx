@@ -1,23 +1,50 @@
 import { Award } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export const Awards = () => {
+  const { t } = useLanguage()
+
   const awardsList = [
     { 
-      title: "The 3rd International Bingxin Literary Award", 
-      desc: "Honoring excellence in prose and poetry in the spirit of Bingxin." 
+      title: t({ 
+        en: "The 3rd International Bingxin Literary Award",
+        zh: "第三届国际冰心文学奖"
+      }),
+      desc: t({ 
+        en: "Honoring excellence in prose and poetry in the spirit of Bingxin.",
+        zh: "以冰心精神表彰散文与诗歌的卓越成就。"
+      })
     },
     { 
-      title: "The 3rd World Chinese-Language Literature Award", 
-      desc: "Celebrating global voices in Chinese literature." 
+      title: t({ 
+        en: "The 3rd World Chinese-Language Literature Award",
+        zh: "第三届世界华文文学奖"
+      }),
+      desc: t({ 
+        en: "Celebrating global voices in Chinese literature.",
+        zh: "表彰全球华文文学的杰出声音。"
+      })
     },
     { 
-      title: "The Gurnah Literary Award", 
-      desc: "Named after Nobel Laureate Abdulrazak Gurnah." 
+      title: t({ 
+        en: "The Gurnah Literary Award",
+        zh: "古尔纳文学奖"
+      }),
+      desc: t({ 
+        en: "Named after Nobel Laureate Abdulrazak Gurnah.",
+        zh: "以诺贝尔文学奖得主阿卜杜勒拉扎克·古尔纳命名。"
+      })
     },
     { 
-      title: "The Soyinka Literary Award", 
-      desc: "Named after Nobel Laureate Wole Soyinka." 
+      title: t({ 
+        en: "The Soyinka Literary Award",
+        zh: "索因卡文学奖"
+      }),
+      desc: t({ 
+        en: "Named after Nobel Laureate Wole Soyinka.",
+        zh: "以诺贝尔文学奖得主沃莱·索因卡命名。"
+      })
     }
   ]
 
@@ -25,7 +52,9 @@ export const Awards = () => {
     <section id="awards" className="py-20 bg-card">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-serif font-bold text-foreground mb-4">Awards Presented</h2>
+          <h2 className="text-4xl font-serif font-bold text-foreground mb-4">
+            {t({ en: 'Awards Presented', zh: '颁发奖项' })}
+          </h2>
           <div className="w-24 h-1 bg-primary mx-auto"></div>
         </div>
 
@@ -44,8 +73,15 @@ export const Awards = () => {
         </div>
         
         <div className="mt-12 p-8 bg-[oklch(0.22_0_0)] rounded-xl text-center">
-          <h3 className="text-2xl text-white font-serif mb-2">Book Launch of New Perspectives</h3>
-          <p className="text-[oklch(0.65_0_0)]">Celebrating the release of works by our award-winning writers.</p>
+          <h3 className="text-2xl text-white font-serif mb-2">
+            {t({ en: 'Book Launch of New Perspectives', zh: '新书发布会' })}
+          </h3>
+          <p className="text-[oklch(0.65_0_0)]">
+            {t({ 
+              en: 'Celebrating the release of works by our award-winning writers.',
+              zh: '庆祝获奖作家作品的发布。'
+            })}
+          </p>
         </div>
       </div>
     </section>

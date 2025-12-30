@@ -1,4 +1,5 @@
 import { Toaster } from '@/components/ui/sonner'
+import { LanguageProvider } from '@/contexts/LanguageContext'
 import { Navigation } from '@/components/Navigation'
 import { Hero } from '@/components/Hero'
 import { Awards } from '@/components/Awards'
@@ -10,7 +11,7 @@ import { Footer } from '@/components/Footer'
 
 function App() {
   return (
-    <>
+    <LanguageProvider>
       <Navigation />
       <Hero />
       <Awards />
@@ -20,7 +21,7 @@ function App() {
       <Contact />
       <Footer />
       <Toaster />
-    </>
+    </LanguageProvider>
   )
 }
 

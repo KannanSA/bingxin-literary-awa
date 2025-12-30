@@ -1,7 +1,10 @@
 import { Calendar, MapPin } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export const Hero = () => {
+  const { t } = useLanguage()
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-background">
       <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
@@ -12,35 +15,45 @@ export const Hero = () => {
 
       <div className="container mx-auto px-6 z-10 text-center">
         <div className="inline-block border-b-2 border-primary pb-2 mb-6">
-          <span className="text-primary font-bold tracking-widest uppercase text-sm">Singapore • January 15–20, 2026</span>
+          <span className="text-primary font-bold tracking-widest uppercase text-sm">
+            {t({ en: 'Singapore • January 15–20, 2026', zh: '新加坡 • 2026年1月15日至20日' })}
+          </span>
         </div>
         
         <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground mb-6 leading-tight">
-          Introduction to the International<br />
-          <span className="text-primary">Bingxin Literary Pen Conference</span>
+          {t({ 
+            en: 'Introduction to the International', 
+            zh: '国际冰心文学笔会' 
+          })}<br />
+          <span className="text-primary">
+            {t({ en: 'Bingxin Literary Pen Conference', zh: '简介' })}
+          </span>
         </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto font-serif italic">
-          "Two Nobel Prize Laureates Gather for the Bingxin Literary Awards"
+          {t({ 
+            en: '"Two Nobel Prize Laureates Gather for the Bingxin Literary Awards"',
+            zh: '"两位诺贝尔文学奖得主齐聚冰心文学奖"'
+          })}
         </p>
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-12">
           <div className="flex items-center space-x-2 text-foreground bg-card px-6 py-3 rounded-full shadow-sm border">
             <Calendar className="w-5 h-5 text-primary" />
-            <span>Jan 15–20, 2026</span>
+            <span>{t({ en: 'Jan 15–20, 2026', zh: '2026年1月15-20日' })}</span>
           </div>
           <div className="flex items-center space-x-2 text-foreground bg-card px-6 py-3 rounded-full shadow-sm border">
             <MapPin className="w-5 h-5 text-primary" />
-            <span>Asian Civilisations Museum, Singapore</span>
+            <span>{t({ en: 'Asian Civilisations Museum, Singapore', zh: '新加坡亚洲文明博物馆' })}</span>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row gap-4 justify-center">
           <Button asChild size="lg" className="shadow-lg">
-            <a href="#contact">Connect on WeChat</a>
+            <a href="#contact">{t({ en: 'Connect on WeChat', zh: '微信联系' })}</a>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <a href="#awards">View Awards</a>
+            <a href="#awards">{t({ en: 'View Awards', zh: '查看奖项' })}</a>
           </Button>
         </div>
       </div>

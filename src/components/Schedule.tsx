@@ -1,26 +1,35 @@
 import { MapPin } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export const Schedule = () => {
+  const { t } = useLanguage()
+
   const events = [
     { 
-      title: "Literary Field Study Tour", 
-      location: "Nanyang Technological University, Singapore" 
+      title: t({ en: "Literary Field Study Tour", zh: "文学实地考察" }),
+      location: t({ 
+        en: "Nanyang Technological University, Singapore",
+        zh: "新加坡南洋理工大学"
+      })
     },
     { 
-      title: "Literary Awards Ceremony", 
-      location: "Asian Civilisations Museum, Singapore" 
+      title: t({ en: "Literary Awards Ceremony", zh: "文学颁奖典礼" }),
+      location: t({ 
+        en: "Asian Civilisations Museum, Singapore",
+        zh: "新加坡亚洲文明博物馆"
+      })
     },
     { 
-      title: "International Study Tour", 
-      location: "Singapore and Thailand" 
+      title: t({ en: "International Study Tour", zh: "国际考察之旅" }),
+      location: t({ en: "Singapore and Thailand", zh: "新加坡和泰国" })
     },
     { 
-      title: "New Book Launch Events", 
-      location: "For Award-Winning Writers" 
+      title: t({ en: "New Book Launch Events", zh: "新书发布会" }),
+      location: t({ en: "For Award-Winning Writers", zh: "获奖作家" })
     },
     { 
-      title: "Bingxin Literature Successors", 
-      location: "Announcement & Ceremony" 
+      title: t({ en: "Bingxin Literature Successors", zh: "冰心文学传承人" }),
+      location: t({ en: "Announcement & Ceremony", zh: "公布及仪式" })
     }
   ]
 
@@ -29,11 +38,17 @@ export const Schedule = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
           <div>
-            <h2 className="text-4xl font-serif font-bold mb-2">Major Events</h2>
-            <p className="text-[oklch(0.65_0_0)]">January 15–20, 2026</p>
+            <h2 className="text-4xl font-serif font-bold mb-2">
+              {t({ en: 'Major Events', zh: '主要活动' })}
+            </h2>
+            <p className="text-[oklch(0.65_0_0)]">
+              {t({ en: 'January 15–20, 2026', zh: '2026年1月15日至20日' })}
+            </p>
           </div>
           <div className="mt-4 md:mt-0">
-            <span className="text-[oklch(0.55_0_0)] text-sm">* Schedule subject to final updates</span>
+            <span className="text-[oklch(0.55_0_0)] text-sm">
+              {t({ en: '* Schedule subject to final updates', zh: '* 日程可能有最终调整' })}
+            </span>
           </div>
         </div>
 
@@ -59,15 +74,23 @@ export const Schedule = () => {
 
         <div className="mt-16 grid md:grid-cols-2 gap-8">
           <div className="border border-[oklch(0.35_0_0)] p-6 rounded-lg">
-            <h4 className="text-lg font-bold mb-4 text-accent">Primary Venues</h4>
+            <h4 className="text-lg font-bold mb-4 text-accent">
+              {t({ en: 'Primary Venues', zh: '主要场地' })}
+            </h4>
             <ul className="space-y-2 text-[oklch(0.75_0_0)]">
               <li className="flex items-start">
                 <MapPin className="w-4 h-4 mr-2 mt-1" />
-                Asian Civilisations Museum, Singapore
+                {t({ 
+                  en: 'Asian Civilisations Museum, Singapore',
+                  zh: '新加坡亚洲文明博物馆'
+                })}
               </li>
               <li className="flex items-start">
                 <MapPin className="w-4 h-4 mr-2 mt-1" />
-                Chinese Heritage Centre, Nanyang Technological University
+                {t({ 
+                  en: 'Chinese Heritage Centre, Nanyang Technological University',
+                  zh: '南洋理工大学中华文化中心'
+                })}
               </li>
             </ul>
           </div>
