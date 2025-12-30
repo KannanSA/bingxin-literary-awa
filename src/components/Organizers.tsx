@@ -68,8 +68,8 @@ export const Organizers = () => {
       zh: "上海国际诗歌节艺术委员会"
     }),
     t({ 
-      en: '"Chinese Writers Headlines" public media platform',
-      zh: "《中国作家头条》公共媒体平台"
+      en: "Chinese Writers Headlines public media platform",
+      zh: "中国作家头条公众媒体平台"
     }),
     t({ 
       en: "Wenhu Network",
@@ -89,7 +89,7 @@ export const Organizers = () => {
     <section id="organizers" className="py-20 bg-card">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-serif font-bold text-center mb-16 text-foreground">
-          {t({ en: 'Organising Institutions', zh: '主办机构' })}
+          {t({ en: 'Organising Institutions', zh: '组织机构' })}
         </h2>
 
         <div className="grid md:grid-cols-3 gap-12">
