@@ -1,4 +1,4 @@
-import { MessageCircle } from 'lucide-react'
+import { MessageCircle, Mail } from 'lucide-react'
 import { toast } from 'sonner'
 import { useLanguage } from '@/contexts/LanguageContext'
 
@@ -68,6 +68,23 @@ export const Contact = () => {
               {t({ en: 'WeChat ID', zh: '微信号' })}
             </p>
             <p className="text-2xl font-mono">19001005</p>
+            <p className="text-xs mt-2 text-primary-foreground/70">
+              {t({ en: '(Click to copy)', zh: '（点击复制）' })}
+            </p>
+          </div>
+
+          <div 
+            className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 hover:bg-white/20 transition-all cursor-pointer" 
+            onClick={() => copyToClipboard('bingxin19001005@126.com', t({ en: 'Email', zh: '电子邮件' }))}
+          >
+            <Mail className="w-12 h-12 mx-auto mb-4" />
+            <h3 className="text-lg font-bold mb-2">
+              {t({ en: 'Email', zh: '电子邮件' })}
+            </h3>
+            <p className="text-primary-foreground/80 text-sm mb-2">
+              {t({ en: 'Email Address', zh: '邮箱地址' })}
+            </p>
+            <p className="text-xl font-mono break-all">bingxin19001005@126.com</p>
             <p className="text-xs mt-2 text-primary-foreground/70">
               {t({ en: '(Click to copy)', zh: '（点击复制）' })}
             </p>
