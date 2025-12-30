@@ -1,5 +1,27 @@
+import { Toaster } from '@/components/ui/sonner'
+import { Navigation } from '@/components/Navigation'
+import { Hero } from '@/components/Hero'
+import { Awards } from '@/components/Awards'
+import { Guests } from '@/components/Guests'
+import { Schedule } from '@/components/Schedule'
+import { Organizers } from '@/components/Organizers'
+import { Contact } from '@/components/Contact'
+import { Footer } from '@/components/Footer'
+
 function App() {
-    return <div></div>
+  return (
+    <>
+      <Navigation />
+      <Hero />
+      <Awards />
+      <Guests />
+      <Schedule />
+      <Organizers />
+      <Contact />
+      <Footer />
+      <Toaster />
+    </>
+  )
 }
 
 export default App
