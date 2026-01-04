@@ -26,10 +26,6 @@ export const Organizers = () => {
       zh: "日本BEST国际贸易有限公司"
     }),
     t({ 
-      en: "Chinese Heritage Centre, Nanyang Technological University (Singapore)",
-      zh: "南洋理工大学中华文化中心（新加坡）"
-    }),
-    t({ 
       en: "Lianshisheng Cultural Foundation (Singapore)",
       zh: "连士升文化基金会（新加坡）"
     }),
