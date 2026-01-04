@@ -49,10 +49,6 @@ export const Organizers = () => {
       zh: "新加坡亚洲文明博物馆"
     }),
     t({ 
-      en: "Chinese Heritage Centre, Nanyang Technological University",
-      zh: "南洋理工大学中华文化中心"
-    }),
-    t({ 
       en: "Lianshisheng Cultural Foundation, Singapore",
       zh: "连士升文化基金会，新加坡"
     }),
