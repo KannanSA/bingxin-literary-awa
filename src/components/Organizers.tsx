@@ -45,10 +45,6 @@ export const Organizers = () => {
 
   const sponsors = [
     t({ 
-      en: "Asian Civilisations Museum, Singapore",
-      zh: "新加坡亚洲文明博物馆"
-    }),
-    t({ 
       en: "Lianshisheng Cultural Foundation, Singapore",
       zh: "连士升文化基金会，新加坡"
     }),
