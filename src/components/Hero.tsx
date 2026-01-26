@@ -1,4 +1,4 @@
-import { Calendar, MapPin } from 'lucide-react'
+import { Calendar, MapPin, ExternalLink } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useLanguage } from '@/contexts/LanguageContext'
 
@@ -14,6 +14,20 @@ export const Hero = () => {
       </div>
 
       <div className="container mx-auto px-6 z-10 text-center">
+        <a 
+          href="https://mp.weixin.qq.com/s/xR54vEUVmD_XENKArTmV9g" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-accent hover:text-accent-foreground transition-all shadow-lg mb-8 group"
+        >
+          <span>
+            {t({ 
+              en: '🎉 View the 3rd International Bing Xin Literature Award Ceremony in Singapore', 
+              zh: '🎉 查看第三届国际冰心文学奖新加坡颁奖典礼' 
+            })}
+          </span>
+          <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+        </a>
         <div className="inline-block border-b-2 border-primary pb-2 mb-6">
           <span className="text-primary font-bold tracking-widest uppercase text-sm">
             {t({ en: 'Singapore • January 15–20, 2026', zh: '新加坡 • 2026年1月15日至20日' })}
